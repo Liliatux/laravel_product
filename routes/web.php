@@ -15,7 +15,4 @@ Route::get('/', function () {
     return 'coucou';
 });
 
-Route::get('/legumes', function () {
-	$legumes = \App\Legume::all();
-	dd($legumes);
-});
+Route::get('/legumes', '\App\Http\Controllers\LegumeController@getIndex');
