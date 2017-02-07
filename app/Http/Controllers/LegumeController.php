@@ -41,7 +41,15 @@ class LegumeController extends Controller
     }
 
     //Ajoute un nouveau légume dans les données
-    public function postAdd() {
-        
+    public function postAdd(Request $request) {
+        $legume = new Legume;
+
+        $legume->name = $request->name;
+        $legume->stock = $request->stock;
+        $legume->price = $request->price;
+
+        $legume->save();
+
+        return redirect('legumes');
     }
 }
