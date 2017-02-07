@@ -2,7 +2,7 @@
 
 @section('content')
 	<h1>{{$legume->name}}</h1>
-
+	<div>Le prix est de {{$legume->price/100}}€</div>
 	<div class="ui segment">
 		<h3>Stock</h3>
 		<form action="/legumes/sell/{{$legume->id}}" method="post">

@@ -8,7 +8,9 @@
 <body>
 	<menu class="ui navbar">
 		<div>
-			Legume Manager
+			<a href="/legumes">Legume Manager</a>
+			/
+			<a href="/legumes/add">Ajouter un légume</a>
 		</div>
 	</menu>
 	<div class="ui container">
@@ -16,10 +18,9 @@
 	</div>
 	
 	<footer>
-		Lala
+		Vive les légumes !!!
 	</footer>
 	<script>
-		console.log('lala');
 	</script>
 </body>
 </html>
