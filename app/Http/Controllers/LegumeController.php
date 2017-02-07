@@ -11,4 +11,9 @@ class LegumeController extends Controller
     	$legumes = Legume::all();
     	return view('legumes.index', ['legumes' => $legumes]);
     }
+
+    public function getShow($id) {
+    	$legume = Legume::findOrFail($id);
+    	return view('legumes.show', ['legume' => $legume]);
+    }
 }

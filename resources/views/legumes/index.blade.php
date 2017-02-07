@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Legumes</title>
-</head>
-<body>
+@extends('layout.layout')
+
+@section('content')
 	<h1>Ma liste de légumes</h1>
 	@foreach($legumes as $legume)
-		<li>{{$legume->name}}</li>
+		<li><a href="/legumes/show/{{$legume->id}}">{{$legume->name}}</a></li>
 	@endforeach
-</body>
-</html>
+@stop

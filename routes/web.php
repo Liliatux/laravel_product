@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/legumes', '\App\Http\Controllers\LegumeController@getIndex');
+
+Route::get('/legumes/show/{id}', 'LegumeController@getShow');
