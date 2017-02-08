@@ -23,11 +23,11 @@
 					<tr>
 						<td>{{$legume->id}}</td>
 						<td>{{$legume->name}}</td>
-						<td>{{$legume->price}}</td>
+						<td>{{$legume->price/100}}€</td>
 						<td>{{$legume->stock}}</td>
 						<td><a href="/legumes/show/{{$legume->id}}"><i class="large black circle info icon"></i></a></td>
 						<td><a href="/legumes/edit/{{$legume->id}}"><i class="large black edit icon"></i></a></td>
-						<td><a href="/legumes/delete/{{$legume->id}}"><i class="large black delete icon"></i></a></td>
+						<td><form action="/legumes/delete/{{$legume->id}}" method="post">{{csrf_field()}}{{method_field('DELETE')}} <button type="submit" class="ui inverted button"><i class="large black delete icon"></i></button></form></td>
 					</tr>
 				@endforeach
 				</tbody>

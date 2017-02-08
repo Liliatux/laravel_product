@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return 'coucou';
+    return view('index');
 });
 
 Route::get('/legumes', '\App\Http\Controllers\LegumeController@getIndex');
@@ -29,6 +29,12 @@ Route::post('/legumes/add', 'LegumeController@postAdd');
 
 Route::get('/legumes/edit/{id}', 'LegumeController@getEdit');
 
-Route::post('/legumes/edit', 'LegumeController@postEdit');
+Route::put('/legumes/edit', 'LegumeController@putEdit');
 
-Route::get('/legumes/delete/{id}', 'LegumeController@getDelete');
+Route::delete('/legumes/delete/{id}', 'LegumeController@delete');
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/app', function () {
+	return view('/layouts/app');
+});

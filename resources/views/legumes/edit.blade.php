@@ -10,6 +10,7 @@
 			<h1>Editer un légume</h1>
 			<form action="/legumes/edit" method="post" class="ui form">
 				{{csrf_field()}}
+				{{method_field('PUT')}}
 				<input type="hidden" name="id" value="{{$legume->id}}">
 				<label for="name">Nom du légume</label><input type="text" id="name" name="name" value="{{$legume->name}}">
 				<label for="stock">Quantité de légumes</label><input type="number" id="stock" name="stock" value="{{$legume->stock}}">

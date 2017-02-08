@@ -60,7 +60,7 @@ class LegumeController extends Controller
     }
 
     //Editer un légume dans les données
-    public function postEdit(Request $request) {
+    public function putEdit(Request $request) {
         $legume = Legume::find($request->id);
 
         $legume->name = $request->name;
@@ -73,7 +73,7 @@ class LegumeController extends Controller
     }
 
     //Suprimer un légume dans les données
-    public function getDelete($id) {
+    public function delete($id) {
         $legume = Legume::find($id);
 
         $legume->delete();
