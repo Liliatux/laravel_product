@@ -71,4 +71,13 @@ class LegumeController extends Controller
 
         return redirect('legumes');
     }
+
+    //Suprimer un légume dans les données
+    public function getDelete($id) {
+        $legume = Legume::find($id);
+
+        $legume->delete();
+
+        return back();
+    }
 }

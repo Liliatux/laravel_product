@@ -30,3 +30,5 @@ Route::post('/legumes/add', 'LegumeController@postAdd');
 Route::get('/legumes/edit/{id}', 'LegumeController@getEdit');
 
 Route::post('/legumes/edit', 'LegumeController@postEdit');
+
+Route::get('/legumes/delete/{id}', 'LegumeController@getDelete');

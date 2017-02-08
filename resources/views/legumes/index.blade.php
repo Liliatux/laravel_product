@@ -16,6 +16,7 @@
 					<th>Stock</th>
 					<th>Information</th>
 					<th>Edition</th>
+					<th>Supression</th>
 				</thead>
 				<tbody>
 				@foreach($legumes as $legume)
@@ -26,6 +27,7 @@
 						<td>{{$legume->stock}}</td>
 						<td><a href="/legumes/show/{{$legume->id}}"><i class="large black circle info icon"></i></a></td>
 						<td><a href="/legumes/edit/{{$legume->id}}"><i class="large black edit icon"></i></a></td>
+						<td><a href="/legumes/delete/{{$legume->id}}"><i class="large black delete icon"></i></a></td>
 					</tr>
 				@endforeach
 				</tbody>
