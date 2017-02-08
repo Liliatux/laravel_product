@@ -26,3 +26,7 @@ Route::post('/legumes/restock/{id}', 'LegumeController@postRestock');
 Route::get('/legumes/add', 'LegumeController@getAdd');
 
 Route::post('/legumes/add', 'LegumeController@postAdd');
+
+Route::get('/legumes/edit/{id}', 'LegumeController@getEdit');
+
+Route::post('/legumes/edit', 'LegumeController@postEdit');

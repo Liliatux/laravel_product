@@ -52,4 +52,23 @@ class LegumeController extends Controller
 
         return redirect('legumes');
     }
+
+    //Affiche le formulaire d'édition
+    public function getEdit($id) {
+        $legume = Legume::find($id);
+        return view('legumes.edit', ['legume' => $legume]);
+    }
+
+    //Editer un légume dans les données
+    public function postEdit(Request $request) {
+        $legume = Legume::find($request->id);
+
+        $legume->name = $request->name;
+        $legume->stock = $request->stock;
+        $legume->price = $request->price;
+
+        $legume->save();
+
+        return redirect('legumes');
+    }
 }
